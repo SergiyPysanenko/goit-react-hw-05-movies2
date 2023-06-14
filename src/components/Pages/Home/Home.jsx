@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { TheMovieDbAPI } from 'components/Servises/Api';
 import PropTypes from 'prop-types';
 import {MoviesList} from 'components/MoviesList/MoviesList';
-import { MovieList } from './Home.styled';
+import { MovieList, Trending } from './Home.styled';
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <>
-      <h2>Trending today:</h2>
+      <Trending>Trending today:</Trending>
       <MovieList>
         {movies !== null &&
           movies.map(movie => {

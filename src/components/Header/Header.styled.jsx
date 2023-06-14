@@ -8,7 +8,7 @@ export const NavBar = styled.header`
   padding-bottom: 20px;
   margin-bottom: 40px;
   height: 30px;
-  background-color: #353d46ba;
+  background-color: rgb(255, 255, 255, 0.1);
 `;
 
 export const HeaderWrapper = styled.div`
@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
-  color: black;
+  color: white;
 
   font-size: 20px;
   font-weight: 700;
@@ -43,3 +43,4 @@ export const LinkWrapper = styled.div`
   gap: 10px;
   margin-left: 10px;
 `;
+

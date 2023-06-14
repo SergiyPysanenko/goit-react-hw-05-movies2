@@ -10,3 +10,8 @@ export const MovieList = styled.ul`
   display: flex;
   flex-wrap: wrap;
 `;
+
+export const Trending = styled.h2`
+  color: white;
+  margin-left: 20px;
+`;

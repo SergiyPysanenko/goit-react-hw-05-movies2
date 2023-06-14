@@ -29,6 +29,8 @@ export function Cast() {
     getCast();
   }, [moviesId]);
 
+  
+
   return (
     <Block>
       <Title>Cast</Title>
