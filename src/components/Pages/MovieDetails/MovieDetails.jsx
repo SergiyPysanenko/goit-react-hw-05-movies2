@@ -20,7 +20,7 @@ function MovieDetails() {
   const { moviesId } = useParams();
   const [movie, setMovie] = useState({});
   const [error, setError] = useState('');
-
+  const [isCastVisible, setIsCastVisible] = useState(false);
   const location = useLocation();
   const goBackLink = location?.state?.from ?? '/';
 
@@ -37,6 +37,10 @@ function MovieDetails() {
   }, [moviesId]);
 
   const { poster_path, title, vote_average, genres, overview } = movie;
+
+  const toggleCastVisibility = () => {
+    setIsCastVisible(!isCastVisible);
+  };
 
   return (
     <>
@@ -58,7 +62,7 @@ function MovieDetails() {
             {genres && (
               <p>
                 <b>Genres: </b>
-                {genres.map(genre => genre.name).join(', ')}
+                {genres.map((genre) => genre.name).join(', ')}
               </p>
             )}
           </InfoBlock>
@@ -71,6 +75,7 @@ function MovieDetails() {
           <NavLinkStyled
             to={`cast`}
             state={{ from: location?.state?.from ?? '/' }}
+            onClick={toggleCastVisibility}
           >
             Cast
           </NavLinkStyled>
@@ -79,6 +84,7 @@ function MovieDetails() {
           <NavLinkStyled
             to={`reviews`}
             state={{ from: location?.state?.from ?? '/' }}
+            onClick={toggleCastVisibility}
           >
             Reviews
           </NavLinkStyled>
@@ -86,15 +92,16 @@ function MovieDetails() {
       </ul>
 
       <Routes>
-        <Route path="cast" element={<Cast />} />
-        <Route path="reviews" element={<Reviews />} />
+        <Route path="cast" element={isCastVisible && <Cast />} />
+        <Route path="reviews" element={isCastVisible && <Reviews />} />
       </Routes>
     </>
   );
 }
 
 MovieDetails.propTypes = {
-  moviesId: PropTypes.number,
+  moviesId: PropTypes.string.isRequired,
 };
 
 export default MovieDetails;
+
