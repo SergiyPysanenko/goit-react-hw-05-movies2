@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {Form, Input, Button} from './SearchForm.styled';
 
 function SearchForm({ onSubmit, defaultValue }) {
@@ -19,9 +19,9 @@ function SearchForm({ onSubmit, defaultValue }) {
   );
 }
 
-SearchForm.propTypes = {
-  defaultValue: PropTypes.string,
-  onSubmit: PropTypes.func,
-};
+// SearchForm.propTypes = {
+//   defaultValue: PropTypes.string,
+//   onSubmit: PropTypes.func,
+// };
 
 export default SearchForm;

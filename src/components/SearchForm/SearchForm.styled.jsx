@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
   display: flex;
   align-items: center;
-  width: 100px;
+  width: 800px;
+  border-radius: 5%;
   margin-left: 20px;
 `;
 
@@ -15,8 +20,9 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #f39c1c;
+  background-color: #818080;
   border: none;
+  border-radius: 10%;
   color: white;
   padding: 12px 20px;
   text-align: center;
@@ -26,6 +32,6 @@ export const Button = styled.button`
   margin-left: 10px;
   cursor: pointer;
   &:hover {
-    background-color: #818080;
+    background-color: #f39c1c;
   }
 `;
