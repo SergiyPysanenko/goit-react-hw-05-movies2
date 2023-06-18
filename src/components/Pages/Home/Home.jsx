@@ -14,7 +14,6 @@ function Home() {
     const getMovies = async () => {
       try {
         const { data } = await theMovieDbAPI.getPopularFilms();
-
         setMovies(data.results);
       } catch (error) {
         setError(error.message);
