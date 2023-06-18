@@ -12,7 +12,7 @@ import {
   LinkStyled,
   NavLinkStyled,
 } from './MovieDateils.styled';
-import PropTypes from 'prop-types';
+
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
@@ -99,9 +99,6 @@ function MovieDetails() {
   );
 }
 
-MovieDetails.propTypes = {
-  moviesId: PropTypes.string.isRequired,
-};
 
 export default MovieDetails;
 
