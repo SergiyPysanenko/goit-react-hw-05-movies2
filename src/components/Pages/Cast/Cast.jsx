@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Title, CastList, CastItem, Block, Image, Text } from './Cast.styled';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import PropTypes from 'prop-types';
 import { Loader } from 'components/Loader/Loader';
 const theMovieDbAPI = new TheMovieDbAPI();

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Routes, Route, useLocation } from 'react-router-dom';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import { Cast } from 'components/Pages/Cast/Cast';
 import { Reviews } from '../Reviews/Reviews';
 import { Loader } from 'components/Loader/Loader';

@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SearchForm from 'components/SearchForm/SearchForm';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import { MovieList } from './Movies.styled';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import PropTypes from 'prop-types';

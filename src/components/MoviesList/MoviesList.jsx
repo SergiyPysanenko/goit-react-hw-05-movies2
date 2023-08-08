@@ -1,7 +1,7 @@
 import { Container, MovieItem, LinkStyled, Image, Title } from './MoviesList.styled';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import { Loader } from 'components/Loader/Loader';
 
 

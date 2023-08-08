@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import { useParams } from 'react-router-dom';
 import { Title, Block, Text, RevievsList, RevievsItem } from './Reviews.styled';
 import PropTypes from 'prop-types';

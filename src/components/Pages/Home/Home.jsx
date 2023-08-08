@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { TheMovieDbAPI } from 'components/Servises/Api';
+import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import PropTypes from 'prop-types';
 import {MoviesList} from 'components/MoviesList/MoviesList';
 import { MovieList, Trending } from './Home.styled';
