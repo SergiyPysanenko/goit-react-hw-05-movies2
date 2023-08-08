@@ -14,7 +14,6 @@ color: white;
 export const Image = styled.img`
 height: 400px;
 margin-left: 20px;
-
 `;
 
 export const InfoBlock = styled.div`

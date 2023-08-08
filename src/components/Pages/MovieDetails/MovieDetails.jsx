@@ -1,18 +1,15 @@
 import { useState, useEffect } from 'react';
-import { useParams, Routes, Route, useLocation } from 'react-router-dom';
+import { useParams, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { TheMovieDbAPI } from 'components/Servises/themoviedbapi';
 import { Cast } from 'components/Pages/Cast/Cast';
 import { Reviews } from '../Reviews/Reviews';
-import { Loader } from 'components/Loader/Loader';
 import {
   Block,
   Image,
   InfoBlock,
   Title,
-  LinkStyled,
   NavLinkStyled,
-} from './MovieDateils.styled';
-
+} from './MovieDetails.styled';
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
@@ -44,14 +41,12 @@ function MovieDetails() {
 
   return (
     <>
-      <LinkStyled to={goBackLink}>Go back</LinkStyled>
+      <Link to={goBackLink}>Go back</Link>
       {movie && (
         <Block>
           {poster_path ? (
             <Image src={`${TheMovieDbAPI.IMG_URL + poster_path}`} alt={title} />
-          ) : (
-            <Loader />
-          )}
+          ) : null }
           <InfoBlock>
             <h1>{title}</h1>
             <p>User score: {Math.round(vote_average * 10)} %</p>
@@ -99,6 +94,4 @@ function MovieDetails() {
   );
 }
 
-
 export default MovieDetails;
-
